@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Only re-render what is needed. No waiting on the server to reload entire page.
 
 ## Project Set Up
 
