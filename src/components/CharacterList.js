@@ -17,7 +17,7 @@ export default function CharacterList() {
   } else {
     return (
       <section className="character-list">
-        <SearchForm />
+        {/* <SearchForm /> */}
         {data.map(char => {
           return <p>{char.name}</p>;
         })}
