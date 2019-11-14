@@ -16,12 +16,14 @@ export default function CharacterList() {
     return <p>nothing is here!</p>;
   } else {
     return (
-      <section className="character-list">
-        {/* <SearchForm /> */}
-        {data.map(char => {
-          return <p>{char.name}</p>;
-        })}
-      </section>
+      <div>
+        <section className="character-list">
+          {data.map(char => {
+            return <p>{char.name}</p>;
+          })}
+        </section>
+        <SearchForm data={data} />
+      </div>
     );
   }
 }
