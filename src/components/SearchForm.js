@@ -7,16 +7,32 @@ export default function SearchForm(props) {
     setInputValue(event.target.value);
   };
 
+  let searchStuff = event => {
+    event.preventDefault();
+    console.log(props.data);
+    props.data.map(letter => {
+      // console.log(letter.name);
+      if (letter.name == inputValue.toString()) {
+        console.log("found it!");
+      } else {
+        console.log(inputValue);
+      }
+    });
+  };
+
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(name)}>
+      <form>
         <input
+          type="text"
           onChange={handleInputChange}
           placeholder="name"
-          value={name}
+          value={inputValue}
           name="name"
         />
-        <button type="submit">Search</button>
+        <button onClick={searchStuff} type="submit">
+          Search
+        </button>
       </form>
     </section>
   );
